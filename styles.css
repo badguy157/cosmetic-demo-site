@@ -52,6 +52,7 @@ body {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav-link {
@@ -64,6 +65,26 @@ body {
 
 .nav-link:hover {
   color: #6b8e9e;
+}
+
+.btn-header-cta {
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  background-color: #6b8e9e;
+  color: #ffffff;
+  border: 2px solid #6b8e9e;
+}
+
+.btn-header-cta:hover {
+  background-color: #5a7a88;
+  border-color: #5a7a88;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(107, 142, 158, 0.3);
 }
 
 /* Hero Section */
@@ -97,8 +118,22 @@ body {
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-text-link {
+  color: #6b8e9e;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-text-link:hover {
+  color: #5a7a88;
+  text-decoration: underline;
 }
 
 .btn {
@@ -251,22 +286,69 @@ body {
   margin-bottom: 20px;
 }
 
-.treatment-link {
-  color: #6b8e9e;
-  text-decoration: none;
+.btn-treatment {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 0.9rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: #6b8e9e;
+  border: 2px solid #6b8e9e;
+  text-align: center;
 }
 
-.treatment-link:hover {
-  color: #5a7a88;
+.btn-treatment:hover {
+  background-color: #6b8e9e;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 142, 158, 0.2);
+}
+
+/* Why Choose Section */
+.why-choose {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.trust-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.trust-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.trust-card-description {
+  color: #5a6c7d;
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 /* Results Section */
 .results {
   padding: 80px 0;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  background-color: #ffffff;
 }
 
 .results-grid {
@@ -297,19 +379,57 @@ body {
   height: 200px;
 }
 
-.results-text {
-  text-align: center;
+.results-philosophy {
   max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.05rem;
+  margin: 40px auto 0;
+  padding: 30px;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+}
+
+.results-philosophy-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.results-philosophy-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.results-philosophy-list li {
+  padding: 8px 0 8px 25px;
+  position: relative;
+  color: #5a6c7d;
+  line-height: 1.7;
+}
+
+.results-philosophy-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #6b8e9e;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.results-social-proof {
   color: #5a6c7d;
   line-height: 1.8;
+  font-size: 1.05rem;
+  font-style: italic;
+  border-top: 2px solid #e9ecef;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 /* Team Section */
 .team {
   padding: 80px 0;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
 }
 
 .clinician-profile {
@@ -337,17 +457,55 @@ body {
   margin-bottom: 20px;
 }
 
-.clinician-bio {
+.clinician-intro {
   color: #5a6c7d;
   line-height: 1.8;
   margin-bottom: 20px;
   font-size: 1.05rem;
 }
 
+.clinician-credentials {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.clinician-credentials li {
+  padding: 8px 0;
+  color: #5a6c7d;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.clinician-credentials li strong {
+  color: #2c3e50;
+}
+
+.clinician-why-matters {
+  background-color: #f5f7fa;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 25px;
+  border-left: 4px solid #6b8e9e;
+}
+
+.clinician-why-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.clinician-why-text {
+  color: #5a6c7d;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
 /* Pricing Section */
 .pricing {
   padding: 80px 0;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  background-color: #ffffff;
 }
 
 .pricing-grid {
@@ -390,6 +548,60 @@ body {
   font-size: 0.95rem;
 }
 
+.pricing-consultation-details {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 35px;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+}
+
+.pricing-details-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pricing-details-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pricing-details-list li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  color: #5a6c7d;
+  line-height: 1.7;
+}
+
+.pricing-details-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #6b8e9e;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.pricing-reassurance {
+  color: #5a6c7d;
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 2px solid #e9ecef;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.pricing-cta-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
 .pricing-disclaimer {
   text-align: center;
   color: #5a6c7d;
@@ -402,7 +614,7 @@ body {
 /* FAQ Section */
 .faq {
   padding: 80px 0;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
 }
 
 .faq-list {
@@ -433,6 +645,27 @@ body {
   font-size: 1.05rem;
 }
 
+.faq-final-cta {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.1rem;
+  color: #5a6c7d;
+  padding-top: 40px;
+  border-top: 2px solid #e9ecef;
+}
+
+.faq-cta-link {
+  color: #6b8e9e;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.faq-cta-link:hover {
+  color: #5a7a88;
+  text-decoration: underline;
+}
+
 /* Contact Section */
 .contact {
   padding: 80px 0;
@@ -453,8 +686,32 @@ body {
 
 .contact-subtitle {
   font-size: 1.15rem;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   opacity: 0.95;
+}
+
+.contact-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 35px;
+  max-width: 700px;
+  text-align: left;
+}
+
+.contact-steps li {
+  padding: 12px 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.contact-steps li strong {
+  font-weight: 600;
+}
+
+.btn-contact-main {
+  font-size: 1.1rem;
+  padding: 18px 45px;
 }
 
 .contact .btn-primary {
@@ -503,6 +760,39 @@ body {
   opacity: 0.8;
 }
 
+/* Mobile Sticky CTA Bar */
+.mobile-sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.btn-mobile-sticky {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #6b8e9e;
+  color: #ffffff;
+  border: 2px solid #6b8e9e;
+  transition: all 0.3s ease;
+}
+
+.btn-mobile-sticky:hover {
+  background-color: #5a7a88;
+  border-color: #5a7a88;
+}
+
 /* Footer */
 .footer {
   background-color: #2c3e50;
@@ -536,6 +826,18 @@ body {
 
   .nav-link {
     font-size: 0.9rem;
+  }
+
+  .btn-header-cta {
+    display: none;
+  }
+
+  .mobile-sticky-cta {
+    display: block;
+  }
+
+  body {
+    padding-bottom: 70px;
   }
 
   .hero {
@@ -589,8 +891,17 @@ body {
     gap: 30px;
   }
 
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-steps {
+    text-align: left;
+    padding-left: 20px;
   }
 
   .contact-title {
