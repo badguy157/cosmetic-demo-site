@@ -5,6 +5,33 @@
   padding: 0;
 }
 
+/* Demo Notice Bar */
+.demo-notice-bar {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 12px 0;
+  border-bottom: 1px solid #1a252f;
+  text-align: center;
+}
+
+.demo-notice-text {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.demo-notice-link {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.demo-notice-link:hover {
+  opacity: 0.8;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -810,6 +837,24 @@ body {
   font-size: 0.85rem;
   opacity: 0.7;
   font-style: italic;
+}
+
+.footer-backlink {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-backlink-anchor {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.footer-backlink-anchor:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 /* Responsive Design */
