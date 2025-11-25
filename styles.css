@@ -73,6 +73,11 @@ body {
   font-weight: 600;
   color: #6b8e9e;
   letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.logo.brand-link:hover {
+  color: #5a7a88;
 }
 
 .nav {
@@ -831,6 +836,16 @@ body {
 .footer-text {
   margin-bottom: 10px;
   opacity: 0.9;
+}
+
+.footer-brand {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-brand:hover {
+  opacity: 0.8;
 }
 
 .footer-disclaimer {

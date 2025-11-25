@@ -50,4 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   window.addEventListener('scroll', highlightNavOnScroll);
+
+  // Scroll to top functionality for brand links
+  document.querySelectorAll('.js-scroll-top').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
 });
