@@ -58,4 +58,75 @@ document.addEventListener('DOMContentLoaded', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
+
+  // Initialize FAQ accordions
+  initAccordion('[data-accordion]');
 });
+
+/**
+ * Reusable accordion functionality
+ * Initializes accordion behavior for containers matching the selector.
+ * - Only one item can be open at a time
+ * - First item starts open by default (via .active class in HTML)
+ * - Manages aria-expanded and aria-hidden attributes for accessibility
+ * 
+ * @param {string} containerSelector - CSS selector for accordion containers
+ * @param {Object} options - Configuration options
+ * @param {string} options.itemSelector - Selector for accordion items (default: '.faq-item')
+ * @param {string} options.triggerSelector - Selector for clickable triggers (default: '.faq-question')
+ * @param {string} options.panelSelector - Selector for content panels (default: '.faq-answer')
+ * @param {string} options.activeClass - Class to add to active items (default: 'active')
+ */
+function initAccordion(containerSelector, options = {}) {
+  const defaults = {
+    itemSelector: '.faq-item',
+    triggerSelector: '.faq-question',
+    panelSelector: '.faq-answer',
+    activeClass: 'active'
+  };
+
+  const config = { ...defaults, ...options };
+  const containers = document.querySelectorAll(containerSelector);
+
+  containers.forEach(container => {
+    const items = container.querySelectorAll(config.itemSelector);
+
+    items.forEach(item => {
+      const trigger = item.querySelector(config.triggerSelector);
+      const panel = item.querySelector(config.panelSelector);
+
+      if (!trigger || !panel) return;
+
+      trigger.addEventListener('click', () => {
+        const isActive = item.classList.contains(config.activeClass);
+
+        // Close all other items in this accordion
+        items.forEach(otherItem => {
+          if (otherItem !== item) {
+            const otherTrigger = otherItem.querySelector(config.triggerSelector);
+            const otherPanel = otherItem.querySelector(config.panelSelector);
+            
+            otherItem.classList.remove(config.activeClass);
+            if (otherTrigger) {
+              otherTrigger.setAttribute('aria-expanded', 'false');
+            }
+            if (otherPanel) {
+              otherPanel.setAttribute('aria-hidden', 'true');
+            }
+          }
+        });
+
+        // Toggle current item
+        if (isActive) {
+          item.classList.remove(config.activeClass);
+          trigger.setAttribute('aria-expanded', 'false');
+          panel.setAttribute('aria-hidden', 'true');
+        } else {
+          item.classList.add(config.activeClass);
+          trigger.setAttribute('aria-expanded', 'true');
+          panel.removeAttribute('aria-hidden');
+        }
+      });
+    });
+  });
+}
