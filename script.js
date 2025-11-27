@@ -130,3 +130,56 @@ function initAccordion(containerSelector, options = {}) {
     });
   });
 }
+
+/**
+ * Mobile Sticky CTA visibility toggle
+ * Shows/hides the sticky CTA based on hero CTA visibility using IntersectionObserver.
+ * Only active on mobile screens (max-width: 768px).
+ */
+function initMobileStickyCta() {
+  const heroCta = document.getElementById('hero-cta');
+  const stickyCta = document.getElementById('sticky-cta');
+
+  if (!heroCta || !stickyCta) return;
+
+  const mobileQuery = window.matchMedia('(max-width: 768px)');
+  let observer = null;
+
+  function handleIntersection(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Hero CTA is visible, hide sticky CTA
+        stickyCta.classList.remove('sticky-cta--visible');
+      } else {
+        // Hero CTA is not visible, show sticky CTA
+        stickyCta.classList.add('sticky-cta--visible');
+      }
+    });
+  }
+
+  function setupObserver() {
+    if (observer) {
+      observer.disconnect();
+    }
+
+    if (mobileQuery.matches) {
+      observer = new IntersectionObserver(handleIntersection, {
+        root: null,
+        threshold: 0
+      });
+      observer.observe(heroCta);
+    } else {
+      // On desktop, ensure sticky CTA visibility class is removed
+      stickyCta.classList.remove('sticky-cta--visible');
+    }
+  }
+
+  // Initial setup
+  setupObserver();
+
+  // Re-evaluate on viewport changes
+  mobileQuery.addEventListener('change', setupObserver);
+}
+
+// Initialize mobile sticky CTA behavior
+document.addEventListener('DOMContentLoaded', initMobileStickyCta);
