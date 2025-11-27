@@ -1031,14 +1031,17 @@ body {
 }
 
 .faq-answer {
+  display: block;
   overflow: hidden;
   max-height: 0;
-  transition: max-height var(--transition-normal), padding var(--transition-normal);
+  opacity: 0;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
   padding: 0 28px;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 1000px;
+  max-height: 600px;
+  opacity: 1;
   padding: 0 28px 24px;
 }
 
@@ -1496,8 +1499,12 @@ body {
   }
 
   .faq-answer {
-    padding: 0 20px 20px;
+    padding: 0 20px;
     font-size: 0.95rem;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 20px 20px;
   }
 
   .treatment-card {
