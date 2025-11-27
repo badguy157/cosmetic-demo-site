@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * Reusable accordion functionality
  * Initializes accordion behavior for containers matching the selector.
  * - Only one item can be open at a time
- * - First item starts open by default (via .active class in HTML)
+ * - All items start collapsed by default
  * - Manages aria-expanded and aria-hidden attributes for accessibility
  * 
  * @param {string} containerSelector - CSS selector for accordion containers
