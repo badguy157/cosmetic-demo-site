@@ -1038,7 +1038,7 @@ body {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 500px;
+  max-height: 1000px;
   padding: 0 28px 24px;
 }
 

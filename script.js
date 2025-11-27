@@ -124,7 +124,7 @@ function initAccordion(containerSelector, options = {}) {
         } else {
           item.classList.add(config.activeClass);
           trigger.setAttribute('aria-expanded', 'true');
-          panel.setAttribute('aria-hidden', 'false');
+          panel.removeAttribute('aria-hidden');
         }
       });
     });
