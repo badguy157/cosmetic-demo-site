@@ -1228,6 +1228,24 @@ body {
   border-top: 1px solid var(--color-grey-200);
 }
 
+/* Mobile-specific styles: hide sticky CTA by default and show on scroll */
+@media (max-width: 768px) {
+  .mobile-sticky-cta {
+    display: block;
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    padding: 10px 16px;
+  }
+  
+  .mobile-sticky-cta.sticky-cta--visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 .btn-mobile-sticky {
   display: block;
   width: 100%;
@@ -1340,10 +1358,6 @@ body {
 
   .btn-header-cta {
     display: none;
-  }
-
-  .mobile-sticky-cta {
-    display: block;
   }
 
   body {
