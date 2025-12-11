@@ -8,50 +8,76 @@
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
-  <body>
+  <body class="page-gradient antialiased">
     <!-- Demo Notice Bar -->
-    <div class="demo-notice-bar">
-      <div class="container">
-        <p class="demo-notice-text">
-          Demo only. Example design for illustration, not a real clinic. Built by <a href="https://www.keyturn.studio/" class="demo-notice-link">Keyturn Studio</a>.
+    <div class="bg-slate-800 text-white py-2.5 text-center">
+      <div class="max-w-6xl mx-auto px-4">
+        <p class="text-sm opacity-90 leading-relaxed">
+          Demo only. Example design for illustration, not a real clinic. Built by <a href="https://www.keyturn.studio/" class="text-white underline font-semibold hover:opacity-75 transition-opacity duration-150">Keyturn Studio</a>.
         </p>
       </div>
     </div>
 
     <!-- Sticky Header -->
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <a href="#" class="logo brand-link js-scroll-top" role="button">Aurora Aesthetic Clinic</a>
-          <nav class="nav">
-            <a href="#treatments" class="nav-link">Treatments</a>
-            <a href="#results" class="nav-link">Results</a>
-            <a href="#team" class="nav-link">Team</a>
-            <a href="#pricing" class="nav-link">Pricing</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <a href="#contact" class="btn btn-header-cta">Book consultation</a>
+    <header class="sticky top-0 z-50 bg-white/98 backdrop-blur-md shadow-sm border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4 flex-wrap gap-5">
+          <a href="#" class="text-xl font-semibold text-ink tracking-tight hover:text-ink-dark transition-colors duration-150 js-scroll-top" role="button">Aurora Aesthetic Clinic</a>
+          <nav class="flex gap-8 flex-wrap items-center">
+            <a href="#treatments" class="text-slate-600 text-sm font-medium hover:text-ink transition-colors duration-150 nav-link">Treatments</a>
+            <a href="#results" class="text-slate-600 text-sm font-medium hover:text-ink transition-colors duration-150 nav-link">Results</a>
+            <a href="#team" class="text-slate-600 text-sm font-medium hover:text-ink transition-colors duration-150 nav-link">Team</a>
+            <a href="#pricing" class="text-slate-600 text-sm font-medium hover:text-ink transition-colors duration-150 nav-link">Pricing</a>
+            <a href="#faq" class="text-slate-600 text-sm font-medium hover:text-ink transition-colors duration-150 nav-link">FAQ</a>
+            <a href="#contact" class="text-slate-600 text-sm font-medium hover:text-ink transition-colors duration-150 nav-link">Contact</a>
+            <a href="#contact" class="hidden md:inline-flex px-6 py-2.5 text-sm font-semibold text-white bg-ink border-2 border-ink rounded-full hover:bg-ink-dark hover:border-ink-dark hover:-translate-y-0.5 hover:shadow-lg transition-all duration-250 shadow-md">Book consultation</a>
           </nav>
         </div>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <span class="hero-label">Aurora Aesthetic Clinic | Subtle cosmetic treatments</span>
-            <h1 class="hero-title">Subtle cosmetic treatments that keep you looking like yourself</h1>
-            <p class="hero-subtitle">Doctor-led care with a focus on natural results and safety-first protocols. We enhance what makes you unique. We never change it.</p>
-            <div id="hero-cta" class="hero-buttons">
-              <a href="#contact" class="btn btn-primary">Book a consultation</a>
-              <a href="#treatments" class="btn btn-secondary">See treatments</a>
+    <section class="py-16 lg:py-24 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 lg:px-0">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left: Text Content -->
+          <div class="text-center lg:text-left">
+            <span class="inline-flex items-center px-5 py-2 bg-teal-pale text-teal-dark rounded-full text-xs font-semibold tracking-wider uppercase mb-4">Aurora Aesthetic Clinic | Subtle cosmetic treatments</span>
+            <h1 class="text-4xl lg:text-5xl font-semibold text-slate-800 leading-tight tracking-tight mb-5">Subtle cosmetic treatments that keep you looking like yourself</h1>
+            <p class="text-lg lg:text-xl text-slate-600 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">Doctor-led care with a focus on natural results and safety-first protocols. We enhance what makes you unique. We never change it.</p>
+            <div id="hero-cta" class="flex flex-col sm:flex-row gap-4 items-center lg:items-start">
+              <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-ink border-2 border-ink rounded-full hover:bg-ink-dark hover:border-ink-dark hover:-translate-y-1 hover:shadow-xl transition-all duration-250 shadow-lg w-full sm:w-auto">Book first consult</a>
+              <a href="#treatments" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-250 w-full sm:w-auto">View treatments</a>
             </div>
           </div>
-          <div class="hero-image">
-            <div class="placeholder-image" role="img" aria-label="Professional aesthetic clinic treatment room with clean, modern interior">
-              <span class="placeholder-text">Hero Image</span>
+
+          <!-- Right: Hero Card -->
+          <div class="relative">
+            <div class="hero-card-gradient rounded-2xl border border-slate-200 shadow-xl overflow-hidden min-h-[520px] flex flex-col relative">
+              <!-- Badge at top -->
+              <div class="absolute top-5 left-5 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md z-10">
+                <p class="text-xs font-medium text-slate-700">Aurora Aesthetic Clinic · London</p>
+              </div>
+              
+              <!-- Before/After placeholder area -->
+              <div class="flex-1 flex items-center justify-center p-8 pt-20">
+                <div class="text-center">
+                  <div class="w-full h-64 bg-white/40 backdrop-blur-sm rounded-xl border border-white/60 shadow-inner flex items-center justify-center mb-4">
+                    <p class="text-slate-500 font-medium text-sm">Before / after area</p>
+                  </div>
+                  <p class="text-xs text-slate-600 italic">Patient results preview</p>
+                </div>
+              </div>
+              
+              <!-- Rating at bottom -->
+              <div class="bg-white/80 backdrop-blur-sm border-t border-slate-200 px-5 py-3">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-yellow-500">★★★★★</span>
+                  </div>
+                  <p class="text-xs font-medium text-slate-600">4.9 from 180+ reviews</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -59,23 +85,23 @@
     </section>
 
     <!-- Trust & Quick Stats Strip -->
-    <section class="trust-strip">
-      <div class="container">
-        <div class="trust-chips">
-          <div class="chip">
-            <span class="chip-icon">✓</span>
+    <section class="bg-white py-12 border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-center gap-5 flex-wrap">
+          <div class="flex items-center gap-2.5 px-5 py-3 bg-slate-50 border border-slate-200 rounded-full text-sm text-slate-600 font-medium hover:bg-teal-pale hover:border-teal-light transition-all duration-150">
+            <span class="text-teal font-bold text-base">✓</span>
             <span>Doctor-led clinic</span>
           </div>
-          <div class="chip">
-            <span class="chip-icon">✓</span>
+          <div class="flex items-center gap-2.5 px-5 py-3 bg-slate-50 border border-slate-200 rounded-full text-sm text-slate-600 font-medium hover:bg-teal-pale hover:border-teal-light transition-all duration-150">
+            <span class="text-teal font-bold text-base">✓</span>
             <span>Personalised plans</span>
           </div>
-          <div class="chip">
-            <span class="chip-icon">✓</span>
+          <div class="flex items-center gap-2.5 px-5 py-3 bg-slate-50 border border-slate-200 rounded-full text-sm text-slate-600 font-medium hover:bg-teal-pale hover:border-teal-light transition-all duration-150">
+            <span class="text-teal font-bold text-base">✓</span>
             <span>Central London</span>
           </div>
-          <div class="chip">
-            <span class="chip-icon">✓</span>
+          <div class="flex items-center gap-2.5 px-5 py-3 bg-slate-50 border border-slate-200 rounded-full text-sm text-slate-600 font-medium hover:bg-teal-pale hover:border-teal-light transition-all duration-150">
+            <span class="text-teal font-bold text-base">✓</span>
             <span>Natural results</span>
           </div>
         </div>
@@ -83,144 +109,231 @@
     </section>
 
     <!-- Treatments Overview -->
-    <section id="treatments" class="treatments">
-      <div class="container">
-        <h2 class="section-title">Treatments we offer</h2>
-        <p class="section-intro">Most patients start with a consultation to decide which of these is right for them. We'll assess your goals and recommend the best approach for natural-looking results.</p>
-        <div class="treatment-grid">
-          <div class="treatment-card">
-            <h3 class="treatment-name">Anti-wrinkle Injections</h3>
-            <p class="treatment-description">Reduce the appearance of fine lines and wrinkles with precision-placed injections for a refreshed, natural look.</p>
-            <a href="#contact" class="btn-treatment">View details</a>
+    <section id="treatments" class="py-16 lg:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 lg:px-0">
+        <h2 class="text-3xl lg:text-4xl font-medium text-slate-700 text-center mb-4 tracking-tight">Treatments we offer</h2>
+        <p class="text-center text-base lg:text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">Most patients start with a consultation to decide which of these is right for them. We'll assess your goals and recommend the best approach for natural-looking results.</p>
+        
+        <!-- Treatment Filter Pills -->
+        <div class="flex justify-center gap-3 flex-wrap mb-12">
+          <button class="px-5 py-2.5 text-sm font-medium bg-ink text-white border border-ink rounded-full transition-all duration-200">All treatments</button>
+          <button class="px-5 py-2.5 text-sm font-medium bg-white text-slate-600 border border-slate-300 rounded-full hover:bg-slate-50 transition-all duration-200">Anti-wrinkle</button>
+          <button class="px-5 py-2.5 text-sm font-medium bg-white text-slate-600 border border-slate-300 rounded-full hover:bg-slate-50 transition-all duration-200">Fillers</button>
+          <button class="px-5 py-2.5 text-sm font-medium bg-white text-slate-600 border border-slate-300 rounded-full hover:bg-slate-50 transition-all duration-200">Skin health</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+            <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Anti-wrinkle Injections</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Reduce the appearance of fine lines and wrinkles with precision-placed injections for a refreshed, natural look.</p>
+            <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="treatment-card">
-            <h3 class="treatment-name">Dermal Fillers</h3>
-            <p class="treatment-description">Restore volume and contour to areas of the face for subtle enhancement and rejuvenation.</p>
-            <a href="#contact" class="btn-treatment">View details</a>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+            <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Dermal Fillers</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Restore volume and contour to areas of the face for subtle enhancement and rejuvenation.</p>
+            <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="treatment-card">
-            <h3 class="treatment-name">Skin Rejuvenation</h3>
-            <p class="treatment-description">Advanced treatments to improve skin texture, tone, and overall radiance.</p>
-            <a href="#contact" class="btn-treatment">View details</a>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+            <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Skin Rejuvenation</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Advanced treatments to improve skin texture, tone, and overall radiance.</p>
+            <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="treatment-card">
-            <h3 class="treatment-name">Medical Facials</h3>
-            <p class="treatment-description">Clinical-grade skincare treatments tailored to your skin's unique needs.</p>
-            <a href="#contact" class="btn-treatment">View details</a>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+            <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Medical Facials</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Clinical-grade skincare treatments tailored to your skin's unique needs.</p>
+            <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="treatment-card">
-            <h3 class="treatment-name">Skin Tightening</h3>
-            <p class="treatment-description">Non-surgical options to improve skin firmness and reduce signs of aging.</p>
-            <a href="#contact" class="btn-treatment">View details</a>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+            <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Skin Tightening</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Non-surgical options to improve skin firmness and reduce signs of aging.</p>
+            <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="treatment-card">
-            <h3 class="treatment-name">Chemical Peels</h3>
-            <p class="treatment-description">Professional peels to address pigmentation, acne scarring, and skin texture concerns.</p>
-            <a href="#contact" class="btn-treatment">View details</a>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+            <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Chemical Peels</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Professional peels to address pigmentation, acne scarring, and skin texture concerns.</p>
+            <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Why Choose Aurora Section -->
-    <section class="why-choose">
-      <div class="container">
-        <h2 class="section-title">Why patients choose Aurora</h2>
-        <div class="trust-grid">
-          <div class="trust-card">
-            <h3 class="trust-card-title">Doctor-led care</h3>
-            <p class="trust-card-description">All treatments are performed by a qualified medical doctor with specialist training. No beauticians, no guesswork. Just safe, professional care.</p>
+    <section class="py-16 lg:py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 lg:px-0">
+        <h2 class="text-3xl lg:text-4xl font-medium text-slate-700 text-center mb-12 tracking-tight">Why patients choose Aurora</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white border border-slate-200 rounded-xl p-7 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="w-12 h-12 rounded-full bg-teal-pale flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2 tracking-tight">Doctor-led care</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Safe, professional care from a qualified medical doctor</p>
           </div>
-          <div class="trust-card">
-            <h3 class="trust-card-title">Natural, not over-done results</h3>
-            <p class="trust-card-description">We believe in subtle enhancement that respects your features. You'll look refreshed and like yourself. You'll never look overdone or obvious.</p>
+          <div class="bg-white border border-slate-200 rounded-xl p-7 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="w-12 h-12 rounded-full bg-teal-pale flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2 tracking-tight">Natural, not over-done results</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Subtle enhancement that respects your features</p>
           </div>
-          <div class="trust-card">
-            <h3 class="trust-card-title">Clear pricing before treatment</h3>
-            <p class="trust-card-description">Transparent costs discussed upfront during consultation. No hidden fees, no pressure to commit. Just honest, straightforward pricing.</p>
+          <div class="bg-white border border-slate-200 rounded-xl p-7 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="w-12 h-12 rounded-full bg-teal-pale flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2 tracking-tight">Clear pricing before treatment</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Transparent costs upfront with no hidden fees</p>
           </div>
-          <div class="trust-card">
-            <h3 class="trust-card-title">Discrete central London clinic</h3>
-            <p class="trust-card-description">Professional, private setting on Harley Street. Easy to reach, designed for your comfort and complete confidentiality.</p>
+          <div class="bg-white border border-slate-200 rounded-xl p-7 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="w-12 h-12 rounded-full bg-teal-pale flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2 tracking-tight">Discrete central London clinic</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Professional, private setting on Harley Street</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Results / Before-and-After Section -->
-    <section id="results" class="results">
-      <div class="container">
-        <h2 class="section-title">Natural-looking results</h2>
-        <div class="results-grid">
-          <div class="result-tile">
-            <div class="result-label">Before & After</div>
-            <div class="result-placeholder"></div>
-            <div class="result-caption">Subtle lip enhancement</div>
+    <section id="results" class="py-16 lg:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 lg:px-0">
+        <h2 class="text-3xl lg:text-4xl font-medium text-slate-700 text-center mb-3 tracking-tight">Natural-looking results</h2>
+        <p class="text-center text-sm text-slate-500 mb-10 max-w-2xl mx-auto">Photos are anonymized examples for illustration only. Individual results may vary.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+          <div class="group relative bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-medium text-slate-600 z-10">Before</div>
+            <div class="bg-gradient-to-br from-slate-100 to-slate-200 aspect-[4/3]"></div>
+            <div class="p-3 text-center border-t border-slate-100">
+              <p class="text-sm text-slate-600">Subtle lip enhancement</p>
+            </div>
           </div>
-          <div class="result-tile">
-            <div class="result-label">Before & After</div>
-            <div class="result-placeholder"></div>
-            <div class="result-caption">Lower face refresh</div>
+          <div class="group relative bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-medium text-slate-600 z-10">After</div>
+            <div class="bg-gradient-to-br from-slate-100 to-slate-200 aspect-[4/3]"></div>
+            <div class="p-3 text-center border-t border-slate-100">
+              <p class="text-sm text-slate-600">Lower face refresh</p>
+            </div>
           </div>
-          <div class="result-tile">
-            <div class="result-label">Before & After</div>
-            <div class="result-placeholder"></div>
-            <div class="result-caption">Forehead smoothing</div>
+          <div class="group relative bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-medium text-slate-600 z-10">Subtle change</div>
+            <div class="bg-gradient-to-br from-slate-100 to-slate-200 aspect-[4/3]"></div>
+            <div class="p-3 text-center border-t border-slate-100">
+              <p class="text-sm text-slate-600">Forehead smoothing</p>
+            </div>
           </div>
-          <div class="result-tile">
-            <div class="result-label">Before & After</div>
-            <div class="result-placeholder"></div>
-            <div class="result-caption">Cheek contouring</div>
+          <div class="group relative bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-medium text-slate-600 z-10">Before</div>
+            <div class="bg-gradient-to-br from-slate-100 to-slate-200 aspect-[4/3]"></div>
+            <div class="p-3 text-center border-t border-slate-100">
+              <p class="text-sm text-slate-600">Cheek contouring</p>
+            </div>
           </div>
-          <div class="result-tile">
-            <div class="result-label">Before & After</div>
-            <div class="result-placeholder"></div>
-            <div class="result-caption">Under-eye rejuvenation</div>
+          <div class="group relative bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-medium text-slate-600 z-10">After</div>
+            <div class="bg-gradient-to-br from-slate-100 to-slate-200 aspect-[4/3]"></div>
+            <div class="p-3 text-center border-t border-slate-100">
+              <p class="text-sm text-slate-600">Under-eye rejuvenation</p>
+            </div>
           </div>
-          <div class="result-tile">
-            <div class="result-label">Before & After</div>
-            <div class="result-placeholder"></div>
-            <div class="result-caption">Jawline definition</div>
+          <div class="group relative bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-medium text-slate-600 z-10">Subtle change</div>
+            <div class="bg-gradient-to-br from-slate-100 to-slate-200 aspect-[4/3]"></div>
+            <div class="p-3 text-center border-t border-slate-100">
+              <p class="text-sm text-slate-600">Jawline definition</p>
+            </div>
           </div>
         </div>
-        <div class="results-philosophy">
-          <h3 class="results-philosophy-title">Our approach to results</h3>
-          <ul class="results-philosophy-list">
-            <li>No exaggerated lips or overdone features. We enhance, never transform.</li>
-            <li>Subtle profile balancing that respects your natural bone structure</li>
-            <li>Conservative approach that can always be adjusted over time</li>
-            <li>Focus on refreshed, rested appearance, not a "done" look</li>
+        
+        <div class="max-w-3xl mx-auto bg-slate-50 border border-slate-200 rounded-xl p-8">
+          <h3 class="text-xl font-semibold text-slate-800 mb-4 tracking-tight">Our approach to results</h3>
+          <ul class="space-y-2.5 mb-5">
+            <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+              <span class="text-teal font-bold text-base flex-shrink-0">✓</span>
+              <span>No exaggerated lips or overdone features. We enhance, never transform.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+              <span class="text-teal font-bold text-base flex-shrink-0">✓</span>
+              <span>Subtle profile balancing that respects your natural bone structure</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+              <span class="text-teal font-bold text-base flex-shrink-0">✓</span>
+              <span>Conservative approach that can always be adjusted over time</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+              <span class="text-teal font-bold text-base flex-shrink-0">✓</span>
+              <span>Focus on refreshed, rested appearance, not a "done" look</span>
+            </li>
           </ul>
-          <p class="results-social-proof">Hundreds of patients treated with a focus on subtle, natural change. Our reputation is built on results that people notice. They won't know why you look so good.</p>
+          <p class="text-slate-600 text-base leading-relaxed italic border-t border-slate-200 pt-5 mt-5">Hundreds of patients treated with a focus on subtle, natural change. Our reputation is built on results that people notice. They won't know why you look so good.</p>
         </div>
+      </div>
+    </section>
       </div>
     </section>
 
     <!-- Meet the Team -->
-    <section id="team" class="team">
-      <div class="container">
-        <h2 class="section-title">Your clinician</h2>
-        <div class="clinician-profile">
-          <div class="clinician-photo">
-            <div class="placeholder-image" role="img" aria-label="Dr. Emily Hart, Lead Clinician">
-              <span class="placeholder-text">Profile Photo</span>
+    <section id="team" class="py-16 lg:py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 lg:px-0">
+        <h2 class="text-3xl lg:text-4xl font-medium text-slate-700 text-center mb-12 tracking-tight">Your clinician</h2>
+        <div class="max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-md overflow-hidden">
+          <div class="grid md:grid-cols-[320px_1fr] gap-0">
+            <div class="bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center min-h-[320px] md:min-h-0" role="img" aria-label="Dr. Emily Hart, Lead Clinician">
+              <span class="text-slate-400 font-medium text-sm">Profile Photo</span>
             </div>
-          </div>
-          <div class="clinician-info">
-            <h3 class="clinician-name">Dr. Emily Hart, MBBS MRCGP</h3>
-            <p class="clinician-intro">A fully qualified medical doctor with specialist training in aesthetic medicine.</p>
-            <ul class="clinician-credentials">
-              <li><strong>MBBS</strong> (Bachelor of Medicine, Bachelor of Surgery)</li>
-              <li><strong>MRCGP</strong> (Member of the Royal College of General Practitioners)</li>
-              <li><strong>10+ years</strong> experience in general practice</li>
-              <li><strong>5+ years</strong> dedicated to aesthetic treatments</li>
-              <li><strong>Advanced training</strong> in facial anatomy and injectable techniques</li>
-              <li><strong>Full professional indemnity</strong> insurance</li>
-              <li><strong>GMC registered</strong> medical practitioner</li>
-            </ul>
-            <div class="clinician-why-matters">
-              <h4 class="clinician-why-title">Why this matters</h4>
-              <p class="clinician-why-text">Medical training means Dr. Hart understands not just facial aesthetics, but the underlying anatomy, potential complications, and how to manage them safely. Her general practice background gives her a holistic view of patient health, while her aesthetic specialization ensures precise, predictable results. This combination delivers both safety and expertise. These are the foundation of good outcomes.</p>
+            <div class="p-8 lg:p-10">
+              <h3 class="text-2xl font-semibold text-slate-800 mb-2 tracking-tight">Dr. Emily Hart, MBBS MRCGP</h3>
+              <p class="text-slate-600 text-base leading-relaxed mb-5">A fully qualified medical doctor with specialist training in aesthetic medicine.</p>
+              
+              <!-- Trust row -->
+              <div class="flex flex-wrap gap-3 mb-6 pb-6 border-b border-slate-200">
+                <div class="flex items-center gap-2 text-xs font-medium text-slate-600">
+                  <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>10+ years in cosmetic medicine</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs font-medium text-slate-600">
+                  <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                  <span>GMC registered</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs font-medium text-slate-600">
+                  <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                  </svg>
+                  <span>Focused on natural results</span>
+                </div>
+              </div>
+              
+              <div class="space-y-2 mb-6">
+                <div class="flex items-start gap-2 text-sm text-slate-600">
+                  <span class="text-teal font-bold flex-shrink-0">•</span>
+                  <span><strong class="text-teal font-semibold">MBBS</strong> (Bachelor of Medicine, Bachelor of Surgery)</span>
+                </div>
+                <div class="flex items-start gap-2 text-sm text-slate-600">
+                  <span class="text-teal font-bold flex-shrink-0">•</span>
+                  <span><strong class="text-teal font-semibold">MRCGP</strong> (Member of the Royal College of General Practitioners)</span>
+                </div>
+                <div class="flex items-start gap-2 text-sm text-slate-600">
+                  <span class="text-teal font-bold flex-shrink-0">•</span>
+                  <span><strong class="text-teal font-semibold">Advanced training</strong> in facial anatomy and injectable techniques</span>
+                </div>
+              </div>
+              
+              <div class="bg-teal-pale border-l-4 border-teal rounded p-4">
+                <h4 class="text-sm font-semibold text-slate-800 mb-2">Why this matters</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">Medical training means Dr. Hart understands facial aesthetics and underlying anatomy. This delivers both safety and expertise - the foundation of good outcomes.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -228,176 +341,238 @@
     </section>
 
     <!-- Pricing Snapshot -->
-    <section id="pricing" class="pricing">
-      <div class="container">
-        <h2 class="section-title">Transparent pricing</h2>
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <span class="pricing-label">Consultation</span>
-            <h3 class="pricing-title">Initial Consultation</h3>
-            <p class="pricing-amount">$150 <span>from</span></p>
-            <p class="pricing-note">Comprehensive assessment and treatment planning</p>
-            <ul class="pricing-features">
-              <li>Full facial analysis</li>
-              <li>Personalised treatment plan</li>
-              <li>No obligation to proceed</li>
+    <section id="pricing" class="py-16 lg:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 lg:px-0">
+        <div class="text-center mb-3">
+          <span class="inline-block text-xs font-semibold tracking-widest uppercase text-teal mb-2">Transparent pricing</span>
+          <h2 class="text-3xl lg:text-4xl font-medium text-slate-700 tracking-tight">Investment in yourself</h2>
+        </div>
+        <p class="text-center text-slate-600 text-base mb-12 max-w-2xl mx-auto">Clear pricing discussed upfront. No hidden fees or pressure.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div class="bg-white border-2 border-slate-200 rounded-xl p-8 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <span class="text-xs font-semibold tracking-widest uppercase text-teal mb-2 block">Consultation</span>
+            <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Initial Consultation</h3>
+            <p class="text-4xl font-semibold text-slate-800 mb-1">$150 <span class="text-base font-normal text-slate-500">from</span></p>
+            <p class="text-sm text-slate-600 mb-5">Comprehensive assessment and treatment planning</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <span class="text-teal font-bold flex-shrink-0">✓</span>
+                <span>Full facial analysis</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <span class="text-teal font-bold flex-shrink-0">✓</span>
+                <span>Personalised treatment plan</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <span class="text-teal font-bold flex-shrink-0">✓</span>
+                <span>No obligation to proceed</span>
+              </li>
             </ul>
           </div>
-          <div class="pricing-card featured">
-            <span class="pricing-badge">Most popular</span>
-            <span class="pricing-label">Injectable treatments</span>
-            <h3 class="pricing-title">Anti-wrinkle Treatments</h3>
-            <p class="pricing-amount">$250 <span>from</span></p>
-            <p class="pricing-note">Per treatment area</p>
-            <ul class="pricing-features">
-              <li>Precision-placed injections</li>
-              <li>Natural-looking results</li>
-              <li>Follow-up included</li>
+          
+          <div class="bg-white border-2 border-ink rounded-xl p-8 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-250 relative">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-ink text-white px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Most popular</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-ink mb-2 block">Injectable treatments</span>
+            <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Anti-wrinkle Treatments</h3>
+            <p class="text-4xl font-semibold text-slate-800 mb-1">$250 <span class="text-base font-normal text-slate-500">from</span></p>
+            <p class="text-sm text-slate-600 mb-5">Per treatment area</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <span class="text-ink font-bold flex-shrink-0">✓</span>
+                <span>Precision-placed injections</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <span class="text-ink font-bold flex-shrink-0">✓</span>
+                <span>Natural-looking results</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <span class="text-ink font-bold flex-shrink-0">✓</span>
+                <span>Follow-up included</span>
+              </li>
             </ul>
           </div>
-          <div class="pricing-card">
-            <span class="pricing-label">Skin treatments</span>
-            <h3 class="pricing-title">Skin Rejuvenation</h3>
-            <p class="pricing-amount">$200 <span>from</span></p>
-            <p class="pricing-note">Varies by treatment type</p>
-            <ul class="pricing-features">
-              <li>Clinical-grade products</li>
-              <li>Tailored to your skin</li>
-              <li>Aftercare guidance</li>
+          
+          <div class="bg-white border-2 border-slate-200 rounded-xl p-8 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-250">
+            <span class="text-xs font-semibold tracking-widest uppercase text-teal mb-2 block">Skin treatments</span>
+            <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Skin Rejuvenation</h3>
+            <p class="text-4xl font-semibold text-slate-800 mb-1">$200 <span class="text-base font-normal text-slate-500">from</span></p>
+            <p class="text-sm text-slate-600 mb-5">Varies by treatment type</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <span class="text-teal font-bold flex-shrink-0">✓</span>
+                <span>Clinical-grade products</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <span class="text-teal font-bold flex-shrink-0">✓</span>
+                <span>Tailored to your skin</span>
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <span class="text-teal font-bold flex-shrink-0">✓</span>
+                <span>Aftercare guidance</span>
+              </li>
             </ul>
           </div>
         </div>
         
-        <div class="pricing-consultation-details">
-          <h3 class="pricing-details-title">What's included in your first consultation</h3>
-          <ul class="pricing-details-list">
-            <li>Thorough assessment of your concerns and goals</li>
-            <li>Medical history review and suitability check</li>
-            <li>Clinical photographs for your records</li>
-            <li>Personalised treatment plan with clear recommendations</li>
-            <li>Detailed pricing breakdown for any suggested treatments</li>
-            <li>Full cooling-off period to consider your options</li>
+        <div class="max-w-3xl mx-auto bg-slate-50 border border-slate-200 rounded-xl p-8 mb-8">
+          <h3 class="text-xl font-semibold text-slate-800 mb-6 text-center tracking-tight">What's included in your first consultation</h3>
+          <ul class="grid md:grid-cols-2 gap-x-8 gap-y-3">
+            <li class="flex items-start gap-3 text-sm text-slate-600">
+              <span class="text-teal font-bold text-lg flex-shrink-0">✓</span>
+              <span>Thorough assessment of your concerns and goals</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600">
+              <span class="text-teal font-bold text-lg flex-shrink-0">✓</span>
+              <span>Medical history review and suitability check</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600">
+              <span class="text-teal font-bold text-lg flex-shrink-0">✓</span>
+              <span>Clinical photographs for your records</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600">
+              <span class="text-teal font-bold text-lg flex-shrink-0">✓</span>
+              <span>Personalised treatment plan with clear recommendations</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600">
+              <span class="text-teal font-bold text-lg flex-shrink-0">✓</span>
+              <span>Detailed pricing breakdown for any suggested treatments</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600">
+              <span class="text-teal font-bold text-lg flex-shrink-0">✓</span>
+              <span>Full cooling-off period to consider your options</span>
+            </li>
           </ul>
-          <p class="pricing-reassurance">No pressure to decide on the day. You'll receive written recommendations to review at home. Many patients book treatment at a separate appointment when they're ready.</p>
+          <p class="text-slate-600 text-sm leading-relaxed italic text-center border-t border-slate-200 pt-5 mt-6">No pressure to decide on the day. You'll receive written recommendations to review at home. Many patients book treatment at a separate appointment when they're ready.</p>
         </div>
         
-        <div class="pricing-cta-container">
-          <a href="#contact" class="btn btn-primary">Book consultation</a>
+        <div class="text-center mb-6">
+          <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-ink border-2 border-ink rounded-full hover:bg-ink-dark hover:border-ink-dark hover:-translate-y-1 hover:shadow-xl transition-all duration-250 shadow-lg">Book consultation</a>
         </div>
         
-        <p class="pricing-disclaimer">Exact pricing will be confirmed during your consultation based on your individual treatment plan. We believe in transparent pricing with no hidden costs.</p>
+        <p class="text-center text-slate-500 text-sm italic max-w-2xl mx-auto">Exact pricing will be confirmed during your consultation based on your individual treatment plan. We believe in transparent pricing with no hidden costs.</p>
       </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="faq">
-      <div class="container">
-        <h2 class="section-title">Frequently asked questions</h2>
-        <div class="faq-list" data-accordion>
-          <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">
-              <span class="faq-question-text">Will I look fake or overdone?</span>
+    <section id="faq" class="py-16 lg:py-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl lg:text-4xl font-medium text-slate-700 text-center mb-12 tracking-tight">Frequently asked questions</h2>
+        <div class="space-y-3" data-accordion>
+          <div class="faq-item bg-white rounded-lg border border-slate-200 overflow-hidden transition-all duration-150 hover:bg-slate-50 hover:border-teal-light">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left bg-transparent border-none cursor-pointer font-inherit" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">
+              <span class="faq-question-text flex-1 pr-4 text-lg font-semibold text-slate-800 tracking-tight">Will I look fake or overdone?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
-            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden="true">
-              <p class="faq-answer-content">No. Our approach is conservative and tailored to your features. We aim for subtle enhancement that keeps you looking like yourself. You'll look refreshed, not "done." You can always add more, but you can't easily undo an excessive result.</p>
+            <div class="faq-answer px-6" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden="true">
+              <p class="text-slate-600 leading-relaxed text-base pb-6">No. Our approach is conservative and tailored to your features. We aim for subtle enhancement that keeps you looking like yourself. You'll look refreshed, not "done." You can always add more, but you can't easily undo an excessive result.</p>
             </div>
           </div>
-          <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
-              <span class="faq-question-text">Are treatments safe?</span>
+          <div class="faq-item bg-white rounded-lg border border-slate-200 overflow-hidden transition-all duration-150 hover:bg-slate-50 hover:border-teal-light">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left bg-transparent border-none cursor-pointer font-inherit" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
+              <span class="faq-question-text flex-1 pr-4 text-lg font-semibold text-slate-800 tracking-tight">Are treatments safe?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
-            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden="true">
-              <p class="faq-answer-content">When performed by a qualified medical doctor, these treatments have excellent safety profiles. We use only approved products, follow strict protocols, and manage any complications effectively. All potential risks are discussed before treatment.</p>
+            <div class="faq-answer px-6" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden="true">
+              <p class="text-slate-600 leading-relaxed text-base pb-6">When performed by a qualified medical doctor, these treatments have excellent safety profiles. We use only approved products, follow strict protocols, and manage any complications effectively. All potential risks are discussed before treatment.</p>
             </div>
           </div>
-          <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
-              <span class="faq-question-text">How much does it hurt?</span>
+          <div class="faq-item bg-white rounded-lg border border-slate-200 overflow-hidden transition-all duration-150 hover:bg-slate-50 hover:border-teal-light">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left bg-transparent border-none cursor-pointer font-inherit" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
+              <span class="faq-question-text flex-1 pr-4 text-lg font-semibold text-slate-800 tracking-tight">How much does it hurt?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
-            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden="true">
-              <p class="faq-answer-content">Most patients report minimal discomfort. It is often described as a slight pinch or pressure. We use fine needles and can apply numbing cream if needed. Many are surprised at how quick and comfortable the process is.</p>
+            <div class="faq-answer px-6" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden="true">
+              <p class="text-slate-600 leading-relaxed text-base pb-6">Most patients report minimal discomfort. It is often described as a slight pinch or pressure. We use fine needles and can apply numbing cream if needed. Many are surprised at how quick and comfortable the process is.</p>
             </div>
           </div>
-          <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4">
-              <span class="faq-question-text">Is there downtime afterward?</span>
+          <div class="faq-item bg-white rounded-lg border border-slate-200 overflow-hidden transition-all duration-150 hover:bg-slate-50 hover:border-teal-light">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left bg-transparent border-none cursor-pointer font-inherit" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4">
+              <span class="faq-question-text flex-1 pr-4 text-lg font-semibold text-slate-800 tracking-tight">Is there downtime afterward?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
-            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" aria-hidden="true">
-              <p class="faq-answer-content">Most treatments have minimal to no downtime. You might have slight redness or swelling for a few hours, rarely a small bruise. Most patients return to normal activities right away. Some even book treatments during lunch breaks.</p>
+            <div class="faq-answer px-6" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" aria-hidden="true">
+              <p class="text-slate-600 leading-relaxed text-base pb-6">Most treatments have minimal to no downtime. You might have slight redness or swelling for a few hours, rarely a small bruise. Most patients return to normal activities right away. Some even book treatments during lunch breaks.</p>
             </div>
           </div>
-          <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-5" id="faq-question-5">
-              <span class="faq-question-text">How much will it actually cost?</span>
+          <div class="faq-item bg-white rounded-lg border border-slate-200 overflow-hidden transition-all duration-150 hover:bg-slate-50 hover:border-teal-light">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left bg-transparent border-none cursor-pointer font-inherit" aria-expanded="false" aria-controls="faq-answer-5" id="faq-question-5">
+              <span class="faq-question-text flex-1 pr-4 text-lg font-semibold text-slate-800 tracking-tight">How much will it actually cost?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
-            <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" aria-hidden="true">
-              <p class="faq-answer-content">Pricing depends on your specific treatment plan. A consultation is $150, anti-wrinkle treatments start from $250 per area, and fillers vary by volume needed. We provide exact costs upfront. There are no hidden fees or surprise charges.</p>
+            <div class="faq-answer px-6" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" aria-hidden="true">
+              <p class="text-slate-600 leading-relaxed text-base pb-6">Pricing depends on your specific treatment plan. A consultation is $150, anti-wrinkle treatments start from $250 per area, and fillers vary by volume needed. We provide exact costs upfront. There are no hidden fees or surprise charges.</p>
             </div>
           </div>
-          <div class="faq-item">
-            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-6" id="faq-question-6">
-              <span class="faq-question-text">What if I don't like the results?</span>
+          <div class="faq-item bg-white rounded-lg border border-slate-200 overflow-hidden transition-all duration-150 hover:bg-slate-50 hover:border-teal-light">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left bg-transparent border-none cursor-pointer font-inherit" aria-expanded="false" aria-controls="faq-answer-6" id="faq-question-6">
+              <span class="faq-question-text flex-1 pr-4 text-lg font-semibold text-slate-800 tracking-tight">What if I don't like the results?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
-            <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" aria-hidden="true">
-              <p class="faq-answer-content">Anti-wrinkle treatments naturally fade over 3-4 months. Fillers can be dissolved if needed, though this is rarely necessary with our conservative approach. We work gradually to ensure you're happy with each step.</p>
+            <div class="faq-answer px-6" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" aria-hidden="true">
+              <p class="text-slate-600 leading-relaxed text-base pb-6">Anti-wrinkle treatments naturally fade over 3-4 months. Fillers can be dissolved if needed, though this is rarely necessary with our conservative approach. We work gradually to ensure you're happy with each step.</p>
             </div>
           </div>
         </div>
-        <p class="faq-final-cta">Still unsure? <a href="#contact" class="faq-cta-link">Book a no-pressure consultation</a> to discuss your concerns and learn what's right for you.</p>
+        <p class="text-center mt-12 pt-8 border-t border-slate-200 text-base lg:text-lg text-slate-600">Still unsure? <a href="#contact" class="text-teal font-semibold hover:text-teal-dark hover:underline transition-colors duration-150">Book a no-pressure consultation</a> to discuss your concerns and learn what's right for you.</p>
       </div>
     </section>
 
     <!-- Final CTA + Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="contact-cta">
-          <h2 class="contact-title">Ready to talk about what's right for you?</h2>
-          <p class="contact-subtitle">Your journey starts with a simple conversation. Here's what happens next:</p>
-          <ul class="contact-steps">
-            <li><strong>Book your consultation.</strong> Call, email, or visit us to schedule your appointment.</li>
-            <li><strong>Discuss your goals.</strong> We'll assess your concerns, explain options, and answer all your questions.</li>
-            <li><strong>Receive your plan.</strong> Get a personalised treatment recommendation with clear pricing and no obligation.</li>
+    <section id="contact" class="py-16 lg:py-20 bg-gradient-to-br from-teal-pale to-slate-50 text-center">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="mb-12">
+          <h2 class="text-3xl lg:text-4xl font-medium text-slate-800 mb-4 tracking-tight">Ready to talk about what's right for you?</h2>
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">Your journey starts with a simple conversation. Here's what happens next:</p>
+          <ul class="text-left max-w-lg mx-auto mb-8 space-y-3">
+            <li class="flex items-start gap-3 text-slate-600">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center text-sm font-semibold mt-0.5">1</span>
+              <span class="text-base leading-relaxed"><strong class="text-slate-800 font-semibold">Book your consultation.</strong> Call, email, or visit us to schedule your appointment.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center text-sm font-semibold mt-0.5">2</span>
+              <span class="text-base leading-relaxed"><strong class="text-slate-800 font-semibold">Discuss your goals.</strong> We'll assess your concerns, explain options, and answer all your questions.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center text-sm font-semibold mt-0.5">3</span>
+              <span class="text-base leading-relaxed"><strong class="text-slate-800 font-semibold">Receive your plan.</strong> Get a personalised treatment recommendation with clear pricing and no obligation.</span>
+            </li>
           </ul>
-          <div class="contact-cta-buttons">
-            <a href="tel:+441234567890" class="btn btn-primary btn-contact-main">Book a consultation</a>
-            <a href="mailto:hello@auroraesthetic.clinic" class="btn btn-secondary">Send a question</a>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+            <a href="tel:+441234567890" class="inline-flex items-center justify-center px-8 py-4 text-base lg:text-lg font-semibold text-white bg-ink border-2 border-ink rounded-full hover:bg-ink-dark hover:border-ink-dark hover:-translate-y-1 hover:shadow-xl transition-all duration-250 shadow-lg">Book a consultation</a>
+            <a href="mailto:hello@auroraesthetic.clinic" class="inline-flex items-center justify-center px-8 py-4 text-base lg:text-lg font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-250">Just ask a question</a>
           </div>
-          <p class="contact-reassurance">No pressure. No hard sell. Just honest, professional guidance.</p>
+          <p class="text-sm text-slate-500 italic">No pressure. No hard sell. Just honest, professional guidance.</p>
         </div>
-        <div class="contact-details">
-          <div class="contact-item">
-            <h3 class="contact-label">Address</h3>
-            <p class="contact-info">123 Harley Street<br>London, W1G 7JU<br>United Kingdom</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-slate-300/40">
+          <div class="text-center">
+            <h3 class="text-xs font-semibold tracking-widest uppercase text-teal mb-2">Address</h3>
+            <p class="text-base text-slate-700 leading-relaxed">123 Harley Street<br>London, W1G 7JU<br>United Kingdom</p>
           </div>
-          <div class="contact-item">
-            <h3 class="contact-label">Phone</h3>
-            <p class="contact-info"><a href="tel:+441234567890">+44 (0) 20 1234 5678</a></p>
+          <div class="text-center">
+            <h3 class="text-xs font-semibold tracking-widest uppercase text-teal mb-2">Phone</h3>
+            <p class="text-base text-slate-700"><a href="tel:+441234567890" class="hover:text-ink transition-colors duration-150">+44 (0) 20 1234 5678</a></p>
           </div>
-          <div class="contact-item">
-            <h3 class="contact-label">Email</h3>
-            <p class="contact-info"><a href="mailto:hello@auroraesthetic.clinic">hello@auroraesthetic.clinic</a></p>
+          <div class="text-center">
+            <h3 class="text-xs font-semibold tracking-widest uppercase text-teal mb-2">Email</h3>
+            <p class="text-base text-slate-700"><a href="mailto:hello@auroraesthetic.clinic" class="hover:text-ink transition-colors duration-150">hello@auroraesthetic.clinic</a></p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Mobile Sticky CTA Bar -->
-    <div class="mobile-sticky-cta" id="sticky-cta">
-      <a href="#contact" class="btn btn-mobile-sticky">Book consultation</a>
+    <div class="mobile-sticky-cta fixed bottom-0 left-0 right-0 bg-white py-3 px-5 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] z-[999] border-t border-slate-200 hidden md:hidden transform translate-y-full opacity-0 transition-all duration-250" id="sticky-cta">
+      <a href="#contact" class="block w-full py-4 px-4 text-base font-semibold text-center text-white bg-ink border-2 border-ink rounded-full hover:bg-ink-dark hover:border-ink-dark transition-all duration-250 shadow-md">Book consultation</a>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p class="footer-text">&copy; 2024 <a href="#" class="footer-brand js-scroll-top" role="button">Aurora Aesthetic Clinic</a>. All rights reserved.</p>
-        <p class="footer-disclaimer">This is a demonstration website for a fictional clinic. All information is for illustrative purposes only.</p>
-        <p class="footer-backlink"><a href="https://www.keyturn.studio/proof.html#clinic-demos" class="footer-backlink-anchor">Back to all Keyturn clinic demos →</a></p>
+    <footer class="bg-slate-800 text-white py-12 text-center">
+      <div class="max-w-6xl mx-auto px-4">
+        <p class="mb-3 opacity-90 text-base">&copy; 2024 <a href="#" class="text-white hover:opacity-75 transition-opacity duration-150 js-scroll-top" role="button">Aurora Aesthetic Clinic</a>. All rights reserved.</p>
+        <p class="text-sm opacity-65 italic mb-0">This is a demonstration website for a fictional clinic. All information is for illustrative purposes only.</p>
+        <p class="mt-6 text-sm"><a href="https://www.keyturn.studio/proof.html#clinic-demos" class="text-white opacity-80 hover:opacity-100 hover:underline transition-opacity duration-150 font-medium">Back to all Keyturn clinic demos →</a></p>
       </div>
     </footer>
   </body>
