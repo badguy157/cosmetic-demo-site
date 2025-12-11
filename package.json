@@ -1,8 +1,14 @@
 {
   "scripts": {
-    "start": "servor --reload"
+    "build:css": "npx tailwindcss -i ./input.css -o ./styles.css --minify",
+    "watch:css": "npx tailwindcss -i ./input.css -o ./styles.css --watch",
+    "dev": "npx tailwindcss -i ./input.css -o ./styles.css --watch & servor --reload",
+    "start": "npm run build:css && servor --reload"
   },
   "dependencies": {
     "servor": "^4.0.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
   }
 }
