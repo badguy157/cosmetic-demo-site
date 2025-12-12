@@ -105,6 +105,15 @@
     border-radius: 0;
     margin: 0;
   }
+
+  /* Clinician photo in Your clinician section */
+  .clinician-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
+  }
 }
 
 /* Smooth scroll behavior */
