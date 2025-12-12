@@ -183,3 +183,42 @@ function initMobileStickyCta() {
 
 // Initialize mobile sticky CTA behavior
 document.addEventListener('DOMContentLoaded', initMobileStickyCta);
+
+/**
+ * Treatment filter functionality
+ * Handles filtering of treatment cards based on selected category pill.
+ */
+function initTreatmentFilters() {
+  const filterButtons = document.querySelectorAll('.treatment-filter');
+  const treatmentCards = document.querySelectorAll('.treatment-card');
+
+  if (!filterButtons.length || !treatmentCards.length) return;
+
+  // CSS class constants for pill states
+  const basePillClasses = 'treatment-filter px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-200 cursor-pointer';
+  const activePillClasses = basePillClasses + ' bg-slate-900 text-white shadow-sm';
+  const inactivePillClasses = basePillClasses + ' bg-white text-slate-700 border border-slate-200 hover:bg-slate-50';
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+
+      // Update active state for buttons
+      filterButtons.forEach(btn => {
+        const isActive = btn === this;
+        btn.setAttribute('aria-pressed', isActive);
+        btn.className = isActive ? activePillClasses : inactivePillClasses;
+      });
+
+      // Filter treatment cards
+      treatmentCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const shouldShow = filter === 'all' || category === filter;
+        card.classList.toggle('hidden', !shouldShow);
+      });
+    });
+  });
+}
+
+// Initialize treatment filters
+document.addEventListener('DOMContentLoaded', initTreatmentFilters);

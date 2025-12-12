@@ -117,39 +117,39 @@
         
         <!-- Treatment Filter Pills -->
         <div class="flex justify-center gap-3 flex-wrap mb-12">
-          <button class="px-5 py-2.5 text-sm font-medium bg-ink text-white border border-ink rounded-full transition-all duration-200">All treatments</button>
-          <button class="px-5 py-2.5 text-sm font-medium bg-white text-slate-600 border border-slate-300 rounded-full hover:bg-slate-50 transition-all duration-200">Anti-wrinkle</button>
-          <button class="px-5 py-2.5 text-sm font-medium bg-white text-slate-600 border border-slate-300 rounded-full hover:bg-slate-50 transition-all duration-200">Fillers</button>
-          <button class="px-5 py-2.5 text-sm font-medium bg-white text-slate-600 border border-slate-300 rounded-full hover:bg-slate-50 transition-all duration-200">Skin health</button>
+          <button data-filter="all" aria-pressed="true" class="treatment-filter px-5 py-2.5 text-sm font-medium bg-slate-900 text-white rounded-full shadow-sm transition-all duration-200 cursor-pointer">All treatments</button>
+          <button data-filter="anti" aria-pressed="false" class="treatment-filter px-5 py-2.5 text-sm font-medium bg-white text-slate-700 border border-slate-200 rounded-full hover:bg-slate-50 transition-all duration-200 cursor-pointer">Anti-wrinkle</button>
+          <button data-filter="fillers" aria-pressed="false" class="treatment-filter px-5 py-2.5 text-sm font-medium bg-white text-slate-700 border border-slate-200 rounded-full hover:bg-slate-50 transition-all duration-200 cursor-pointer">Fillers</button>
+          <button data-filter="skin" aria-pressed="false" class="treatment-filter px-5 py-2.5 text-sm font-medium bg-white text-slate-700 border border-slate-200 rounded-full hover:bg-slate-50 transition-all duration-200 cursor-pointer">Skin health</button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+          <div data-category="anti" class="treatment-card bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
             <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Anti-wrinkle Injections</h3>
             <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Reduce the appearance of fine lines and wrinkles with precision-placed injections for a refreshed, natural look.</p>
             <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+          <div data-category="fillers" class="treatment-card bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
             <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Dermal Fillers</h3>
             <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Restore volume and contour to areas of the face for subtle enhancement and rejuvenation.</p>
             <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+          <div data-category="skin" class="treatment-card bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
             <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Skin Rejuvenation</h3>
             <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Advanced treatments to improve skin texture, tone, and overall radiance.</p>
             <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+          <div data-category="skin" class="treatment-card bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
             <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Medical Facials</h3>
             <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Clinical-grade skincare treatments tailored to your skin's unique needs.</p>
             <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+          <div data-category="skin" class="treatment-card bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
             <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Skin Tightening</h3>
             <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Non-surgical options to improve skin firmness and reduce signs of aging.</p>
             <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
           </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
+          <div data-category="skin" class="treatment-card bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-250 flex flex-col">
             <h3 class="text-xl font-semibold text-slate-800 mb-3 tracking-tight">Chemical Peels</h3>
             <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Professional peels to address pigmentation, acne scarring, and skin texture concerns.</p>
             <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-ink bg-transparent border-2 border-ink rounded-full hover:bg-ink hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 self-start">Book</a>
