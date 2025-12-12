@@ -73,44 +73,22 @@
     background: linear-gradient(145deg, #e8f2f3 0%, #d0e5e8 100%);
   }
   
-  /* Premium hero results card - outer wrapper */
+  /* Single white card for hero results */
   .hero-results-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #e8f2f3; /* soft pale teal matching hero background */
-    border-radius: 20px;
-    padding: 16px; /* mobile padding */
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
-  }
-  
-  @media (min-width: 768px) {
-    .hero-results-card {
-      padding: 24px; /* desktop padding */
-    }
-  }
-  
-  /* Premium hero results frame - inner frame */
-  .hero-results-frame {
-    background: #f5f5f7; /* solid light grey */
+    background: white;
     border-radius: 18px;
-    padding: 8px; /* mobile padding */
-    border: 1px solid rgba(15, 23, 42, 0.06);
-    overflow: hidden;
+    padding: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+    max-width: 100%;
   }
   
-  @media (min-width: 768px) {
-    .hero-results-frame {
-      padding: 12px; /* desktop padding */
-    }
-  }
-  
-  /* Premium hero results image */
+  /* Hero results image - direct child of white card */
   .hero-results-image {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 14px; /* slightly less than frame for clean fit */
+    border-radius: 18px;
+    object-fit: cover;
   }
   
   /* Page background gradient */
