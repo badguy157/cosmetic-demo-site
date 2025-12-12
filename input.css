@@ -95,6 +95,16 @@
   .page-gradient {
     background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 50%, #ffffff 100%);
   }
+  
+  /* Result images in Natural-looking results section */
+  .result-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
 }
 
 /* Smooth scroll behavior */
