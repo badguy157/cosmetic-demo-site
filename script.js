@@ -194,6 +194,11 @@ function initTreatmentFilters() {
 
   if (!filterButtons.length || !treatmentCards.length) return;
 
+  // CSS class constants for pill states
+  const basePillClasses = 'treatment-filter px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-200 cursor-pointer';
+  const activePillClasses = basePillClasses + ' bg-slate-900 text-white shadow-sm';
+  const inactivePillClasses = basePillClasses + ' bg-white text-slate-700 border border-slate-200 hover:bg-slate-50';
+
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
       const filter = this.getAttribute('data-filter');
@@ -202,25 +207,14 @@ function initTreatmentFilters() {
       filterButtons.forEach(btn => {
         const isActive = btn === this;
         btn.setAttribute('aria-pressed', isActive);
-        
-        if (isActive) {
-          // Active pill styles
-          btn.className = 'treatment-filter px-5 py-2.5 text-sm font-medium bg-slate-900 text-white rounded-full shadow-sm transition-all duration-200 cursor-pointer';
-        } else {
-          // Inactive pill styles
-          btn.className = 'treatment-filter px-5 py-2.5 text-sm font-medium bg-white text-slate-700 border border-slate-200 rounded-full hover:bg-slate-50 transition-all duration-200 cursor-pointer';
-        }
+        btn.className = isActive ? activePillClasses : inactivePillClasses;
       });
 
       // Filter treatment cards
       treatmentCards.forEach(card => {
         const category = card.getAttribute('data-category');
-        
-        if (filter === 'all' || category === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
+        const shouldShow = filter === 'all' || category === filter;
+        card.classList.toggle('hidden', !shouldShow);
       });
     });
   });
