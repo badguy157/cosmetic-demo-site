@@ -183,3 +183,48 @@ function initMobileStickyCta() {
 
 // Initialize mobile sticky CTA behavior
 document.addEventListener('DOMContentLoaded', initMobileStickyCta);
+
+/**
+ * Treatment filter functionality
+ * Handles filtering of treatment cards based on selected category pill.
+ */
+function initTreatmentFilters() {
+  const filterButtons = document.querySelectorAll('.treatment-filter');
+  const treatmentCards = document.querySelectorAll('.treatment-card');
+
+  if (!filterButtons.length || !treatmentCards.length) return;
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+
+      // Update active state for buttons
+      filterButtons.forEach(btn => {
+        const isActive = btn === this;
+        btn.setAttribute('aria-pressed', isActive);
+        
+        if (isActive) {
+          // Active pill styles
+          btn.className = 'treatment-filter px-5 py-2.5 text-sm font-medium bg-slate-900 text-white rounded-full shadow-sm transition-all duration-200 cursor-pointer';
+        } else {
+          // Inactive pill styles
+          btn.className = 'treatment-filter px-5 py-2.5 text-sm font-medium bg-white text-slate-700 border border-slate-200 rounded-full hover:bg-slate-50 transition-all duration-200 cursor-pointer';
+        }
+      });
+
+      // Filter treatment cards
+      treatmentCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        
+        if (filter === 'all' || category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+// Initialize treatment filters
+document.addEventListener('DOMContentLoaded', initTreatmentFilters);
